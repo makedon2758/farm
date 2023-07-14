@@ -248,7 +248,7 @@ h6 {
   background-image: url(../img/bg.jpg); }
 
 .page__entrance {
-  max-width: 360px;
+  min-width: 360px;
   height: 800px;
   margin: 0 auto;
   background-position: center;
