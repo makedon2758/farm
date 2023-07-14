@@ -357,21 +357,22 @@ h6 {
   background: var(--unnamed, linear-gradient(180deg, #24A2FD 0%, #246BFD 100%));
   -webkit-box-shadow: 0px 4px 30px 0px rgba(80, 122, 251, 0.35);
           box-shadow: 0px 4px 30px 0px rgba(80, 122, 251, 0.35);
-  position: relative;
 }
 
-.body-entrance__button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-          transform: translate(0, -25%);
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-image: url(../img/telegram.svg);
+.body-entrance__button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body-entrance__button > a {
+  margin-right: 10px;
 }
 
 .webp .page__entrance{ background-image: url(../img/bg.webp); }
