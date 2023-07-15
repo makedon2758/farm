@@ -22,12 +22,6 @@
             }));
         }
     }), 0);
-    const script_link = document.querySelectorAll("a");
-    script_link.forEach((el => {
-        el.addEventListener("click", (e => {
-            e.preventDefault();
-        }));
-    }));
     const modalOpen = document.querySelector(".balans-heder__menu");
     const modal = document.querySelector(".modal");
     const modalClose = document.querySelector(".titl__right");

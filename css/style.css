@@ -1024,8 +1024,15 @@ h6 {
   line-height: normal;
 }
 
-.no-webp .no-webp .page__entrance{
+.no-webp .page-exit{
   background-image: url(../img/bg.jpg); }
+
+.page-exit {
+  background-position: top center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .page__entrance {
   max-width: 360px;
@@ -1157,10 +1164,6 @@ h6 {
   margin-right: 10px;
 }
 
-.webp .page__entrance {
-  background-image: url(../img/bg.webp);
-}
-
 .webp .page{ background-image: url(../img/bg.webp); }
 
-.webp .no-webp .page__entrance{ background-image: url(../img/bg.webp); }
+.webp .page-exit{ background-image: url(../img/bg.webp); }
