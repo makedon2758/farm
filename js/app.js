@@ -33,12 +33,20 @@
     const modalExit = document.querySelector(".modal-exit");
     const modalExitCancel = document.querySelector(".content-exit__buttontwo");
     const openModalExit = document.querySelector(".footer-page__exit");
+    const modalBonus = document.querySelector(".modal-bonus");
+    const openBonus = document.querySelector(".footer-page__bonus");
+    const bonusExit = document.querySelector(".content-bonus__exit");
+    const bonusExitTwo = document.querySelector(".content-bonus__buttontwo");
+    const bonusSign = document.querySelector(".content-bonus__buttonone");
+    const begr = document.querySelector(".begr");
+    console.log(!!bonusSign);
     function modalHidden(modal) {
         modal.classList.add("hidden");
     }
     modalHidden(modal);
     modalHidden(modalReff);
     modalHidden(modalExit);
+    modalHidden(modalBonus);
     function openModal(button, modal) {
         button.addEventListener("click", (() => {
             modal.classList.add("show");
@@ -48,6 +56,7 @@
     openModal(modalOpen, modal);
     openModal(modalReffOpen, modalReff);
     openModal(openModalExit, modalExit);
+    openModal(openBonus, modalBonus);
     function closeModal(button, modal) {
         button.addEventListener("click", (() => {
             modal.classList.remove("show");
@@ -63,6 +72,14 @@
     closeModal(modalClose, modal);
     closeModal(modalReffClose, modalReff);
     closeModal(modalExitCancel, modalExit);
+    closeModal(bonusExit, modalBonus);
+    closeModal(bonusExitTwo, modalBonus);
+    if (!!bonusSign) bonusSign.addEventListener("click", (() => {
+        bonusSign.style.display = "none";
+        begr.style.opacity = "0";
+        bonusExitTwo.classList.add("showme");
+        bonusExitTwo.classList.remove("content-bonus__buttontwo");
+    }));
     window["FLS"] = true;
     isWebp();
 })();
