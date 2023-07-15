@@ -36,11 +36,15 @@
     const modalReffOpen = document.querySelector(".header-page__reff");
     const modalReffClose = document.querySelector(".mpdal__reff-close");
     const modalReff = document.querySelector(".modal__reff");
+    const modalExit = document.querySelector(".modal-exit");
+    const modalExitCancel = document.querySelector(".content-exit__buttontwo");
+    const openModalExit = document.querySelector(".footer-page__exit");
     function modalHidden(modal) {
         modal.classList.add("hidden");
     }
     modalHidden(modal);
     modalHidden(modalReff);
+    modalHidden(modalExit);
     function openModal(button, modal) {
         button.addEventListener("click", (() => {
             modal.classList.add("show");
@@ -49,6 +53,7 @@
     }
     openModal(modalOpen, modal);
     openModal(modalReffOpen, modalReff);
+    openModal(openModalExit, modalExit);
     function closeModal(button, modal) {
         button.addEventListener("click", (() => {
             modal.classList.remove("show");
@@ -63,6 +68,7 @@
     }
     closeModal(modalClose, modal);
     closeModal(modalReffClose, modalReff);
+    closeModal(modalExitCancel, modalExit);
     window["FLS"] = true;
     isWebp();
 })();
