@@ -85,7 +85,8 @@
         bonusExitThre.classList.add("showme");
     }));
     bonusExitThre.addEventListener("click", (() => {
-        closeModal(bonusExitThre, modalBonus);
+        modalBonus.classList.add("hidden");
+        modalBonus.classList.remove("show");
         bonusExitTwo.classList.add("showme");
         bonusExitThre.classList.remove("showme");
         imgRotate.classList.remove("rotate");

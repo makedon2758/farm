@@ -1023,19 +1023,6 @@ h6 {
   line-height: normal;
 }
 
-.no-webp .page-exit{
-  background-image: url(../img/bg.jpg); }
-
-.page-exit {
-  background-position: top center;
-  background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.no-webp .page__entrance{
-  background-image: url(../img/bg.jpg); }
-
 .page__entrance {
   max-width: 360px;
   height: 800px;
@@ -1060,6 +1047,9 @@ h6 {
   position: fixed;
 }
 
+.no-webp .entrance__container{
+  background-image: url(../img/bg.jpg); }
+
 .entrance__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1074,6 +1064,10 @@ h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .entrance__logo {
@@ -1403,6 +1397,4 @@ h6 {
 
 .webp .page{ background-image: url(../img/bg.webp); }
 
-.webp .page-exit{ background-image: url(../img/bg.webp); }
-
-.webp .page__entrance{ background-image: url(../img/bg.webp); }
+.webp .entrance__container{ background-image: url(../img/bg.webp); }
