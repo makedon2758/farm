@@ -25,8 +25,8 @@
     const modalOpen = document.querySelector(".balans-heder__menu");
     const modal = document.querySelector(".modal");
     const modalClose = document.querySelector(".titl__right");
-    document.querySelector(".button__deposites");
-    document.querySelector(".button__conclusion");
+    const modalNext1 = document.querySelector(".button__deposites");
+    const modalNext2 = document.querySelector(".button__conclusion");
     const modalReffOpen = document.querySelector(".header-page__reff");
     const modalReffClose = document.querySelector(".mpdal__reff-close");
     const modalReff = document.querySelector(".modal__reff");
@@ -41,6 +41,21 @@
     const bonusSign = document.querySelector(".content-bonus__buttonone");
     const begr = document.querySelector(".begr");
     const imgRotate = document.querySelector(".kolo-content img");
+    const modaldeposites = document.querySelector(".modal-deposites");
+    const modalConclusion = document.querySelector(".conclusion");
+    const modalExits = document.querySelectorAll(".header-deposites__close");
+    const modalExt = document.querySelectorAll(".content-deposites__button");
+    const inputValue = document.querySelectorAll(".usdt");
+    const spanText = document.querySelectorAll(".text");
+    spanText.forEach((ele => {
+        console.log(ele.values);
+        inputValue.forEach(((el, i) => {
+            el.addEventListener("input", (() => {
+                ele.value = el.value;
+                console.log(el.value);
+            }));
+        }));
+    }));
     function modalHidden(modal) {
         modal.classList.add("hidden");
     }
@@ -48,6 +63,8 @@
     modalHidden(modalReff);
     modalHidden(modalExit);
     modalHidden(modalBonus);
+    modalHidden(modaldeposites);
+    modalHidden(modalConclusion);
     function openModal(button, modal) {
         button.addEventListener("click", (() => {
             modal.classList.add("show");
@@ -58,6 +75,16 @@
     openModal(modalReffOpen, modalReff);
     openModal(openModalExit, modalExit);
     openModal(openBonus, modalBonus);
+    function openModalNext(button, modalOpen, modalHiden) {
+        button.addEventListener("click", (() => {
+            modalHiden.classList.add("hidden");
+            modalHiden.classList.remove("show");
+            modalOpen.classList.add("show");
+            modalOpen.classList.remove("hidden");
+        }));
+    }
+    openModalNext(modalNext1, modaldeposites, modal);
+    openModalNext(modalNext2, modalConclusion, modal);
     function closeModal(button, modal) {
         button.addEventListener("click", (() => {
             modal.classList.remove("show");
@@ -74,6 +101,24 @@
     closeModal(modalReffClose, modalReff);
     closeModal(modalExitCancel, modalExit);
     closeModal(bonusExit, modalBonus);
+    modalExits.forEach((el => {
+        closeModal(el, modaldeposites);
+        closeModal(el, modalConclusion);
+        el.addEventListener("click", (() => {
+            spanText.forEach((el => {
+                el.value = "";
+            }));
+        }));
+    }));
+    modalExt.forEach((el => {
+        closeModal(el, modaldeposites);
+        closeModal(el, modalConclusion);
+        el.addEventListener("click", (() => {
+            spanText.forEach((el => {
+                el.value = "";
+            }));
+        }));
+    }));
     bonusSign.addEventListener("click", (() => {
         bonusSign.style.display = "none";
         begr.style.opacity = "0";

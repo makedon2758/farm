@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230716193555">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230716231752">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -269,43 +269,107 @@
 				<!-- modal deposites -->
 
 				<div class="modal-deposites">
-					<div class="modal-deposites__container">
-						<div class="modal-deposites__content content-deposites">
-							<div class="content-deposites__body body-deposites">
-								<div class="body-deposites__header header-deposites">
-									<div class="header-deposites__titl">
-										<div class="titl-deposites__text">
+					<div class="modal-deposites__wraper">
+						<div class="modal-deposites__container">
+							<div class="modal-deposites__content content-deposites">
+								<div class="content-deposites__body body-deposites">
+									<div class="body-deposites__header header-deposites">
+										<div class="header-deposites__titl">
+											<div class="titl-deposites__text">
+												<p>
+													Баланс:
+												</p>
+											</div>
+											<div class="titl-deposites__balans">
+												<span class="span">1000</span> usdt
+											</div>
+										</div>
+										<div class="header-deposites__close">
+											<img src="img/close.svg" alt="close">
+										</div>
+									</div>
+									<div class="body-deposites__main">
+										<div class="main-deposites__text">
 											<p>
-												Баланс:
+												Введите сумму депозита
 											</p>
 										</div>
-										<div class="titl-deposites__balans">
-											<span>1000</span> usdt
+										<div class="main-deposites__input">
+											<input type="text" class="text"> <span>usdt</span>
+											<span class="number-card"></span>
+										</div>
+										<div class="main-deposites__slider range_container">
+											<input type="range" min="1" max="2000" class="usdt">
 										</div>
 									</div>
-									<div class="header-deposites__close">
-										<img src="img/close.svg" alt="close">
+									<div class="body-deposites__footer">
+										<div class="footer-deposites__text">
+											<p>
+												Введите номер кошелька/ карты
+											</p>
+										</div>
+										<div class="footer-deposites__input">
+											<input placeholder="0000 0000 0000 0000" type="text" name="text" id="number">
+											<span class="number-card"></span>
+										</div>
 									</div>
 								</div>
-								<div class="body-deposites__main">
-									<div class="main-deposites__text">
-										<p>
-
-										</p>
-									</div>
-									<div class="main-deposites__input">
-										<input placeholder="usdt" type="text">
-									</div>
-									<div class="main-deposites__slider">
-										<input type="range" min="1" max="2000" value="" name="usdt" id="usdt">
-									</div>
-								</div>
-								<div class="body-deposites__footer">
-									.header-deposites__
+								<div class="content-deposites__button">
+									<button type="submit" class="button">Пополнить</button>
 								</div>
 							</div>
-							<div class="content-deposites__button">
-								<button type="submit" class="button">Пополнить</button>
+						</div>
+					</div>
+				</div>
+				<div class="conclusion">
+					<div class="modal-deposites__wraper">
+						<div class="modal-deposites__container">
+							<div class="modal-deposites__content content-deposites">
+								<div class="content-deposites__body body-deposites">
+									<div class="body-deposites__header header-deposites">
+										<div class="header-deposites__titl">
+											<div class="titl-deposites__text">
+												<p>
+													Баланс:
+												</p>
+											</div>
+											<div class="titl-deposites__balans">
+												<span>1000</span> usdt
+											</div>
+										</div>
+										<div class="header-deposites__close">
+											<img src="img/close.svg" alt="close">
+										</div>
+									</div>
+									<div class="body-deposites__main">
+										<div class="main-deposites__text">
+											<p>
+												Введите сумму на вывод
+											</p>
+										</div>
+										<div class="main-deposites__input">
+											<input type="text" class="text"> <span>usdt</span>
+											<span class="number-card"></span>
+										</div>
+										<div class="main-deposites__slider range_container">
+											<input type="range" min="1" max="2000" value="200" class="usdt">
+										</div>
+									</div>
+									<div class="body-deposites__footer">
+										<div class="footer-deposites__text">
+											<p>
+												Введите номер кошелька/ карты
+											</p>
+										</div>
+										<div class="footer-deposites__input">
+											<input placeholder="0000 0000 0000 0000" type="text" name="text" id="number">
+											<span class="number-card"></span>
+										</div>
+									</div>
+								</div>
+								<div class="content-deposites__button bgblue">
+									<button type="submit" class="button">Вывести</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -317,7 +381,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230716193555"></script>
+	<script src="js/app.min.js?_v=20230716231752"></script>
 </body>
 
 </html>

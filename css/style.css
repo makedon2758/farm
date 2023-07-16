@@ -1395,6 +1395,271 @@ h6 {
   }
 }
 
+.modal-deposites {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(186, 186, 186, 0.03);
+  -webkit-backdrop-filter: blur(4.5px);
+          backdrop-filter: blur(4.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+}
+
+.modal-deposites__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-deposites__wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content-deposites__body {
+  margin-bottom: 2rem;
+  width: 328px;
+  height: 408px;
+  border-radius: 10px;
+  background: rgba(255, 252, 244, 0.7);
+  -webkit-backdrop-filter: blur(33.0666656494px);
+          backdrop-filter: blur(33.0666656494px);
+  padding: 1.25rem 1.5625rem 2.5rem 1.5625rem;
+}
+
+.content-deposites__button {
+  width: 328px;
+  height: 81px;
+  border-radius: 10px;
+  border: 2px solid #FFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00E64E), to(#00C850));
+  background: linear-gradient(180deg, #00E64E 0%, #00C850 100%);
+  -webkit-box-shadow: 0px 4px 30px 0px rgba(124, 251, 80, 0.2);
+          box-shadow: 0px 4px 30px 0px rgba(124, 251, 80, 0.2);
+  color: #FFF;
+  font-family: Mazzard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body-deposites__header {
+  margin-bottom: 1.875rem;
+}
+
+.body-deposites__main {
+  margin-bottom: 3.125rem;
+}
+
+.header-deposites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-deposites__close {
+  cursor: pointer;
+}
+
+.titl-deposites__text {
+  color: #7B7B7B;
+  font-family: Mazzard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.titl-deposites__balans {
+  color: #212121;
+  font-family: Mazzard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.titl-deposites__balans span {
+  font-size: 24px;
+  margin-right: 4px;
+}
+
+.main-deposites__text {
+  color: #7B7B7B;
+  font-family: Mazzard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.1875rem;
+}
+
+.main-deposites__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 279px;
+  padding: 1.0625rem 1.75rem 0.6875rem 1.125rem;
+  height: 81px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#C6C6C6), to(#FFF));
+  background: linear-gradient(180deg, #C6C6C6 0%, #FFF 100%);
+  -webkit-box-shadow: 0px -75px 8px 0px rgba(255, 255, 255, 0.32) inset, 0px -2px 2px 0px rgba(183, 183, 183, 0.5) inset;
+          box-shadow: 0px -75px 8px 0px rgba(255, 255, 255, 0.32) inset, 0px -2px 2px 0px rgba(183, 183, 183, 0.5) inset;
+  margin-bottom: 2.8125rem;
+}
+
+.main-deposites__input input {
+  color: #212121;
+  font-family: Mazzard;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.main-deposites__input span {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  color: #B7B7B7;
+  font-family: Mazzard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.range_container {
+  position: relative;
+  width: 280px;
+  /*input range width*/
+  height: 5px;
+  /*input range height*/
+  overflow: hidden;
+}
+
+input[type=range] {
+  position: absolute;
+  width: 280px;
+  height: 6px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: #FFF;
+  top: -2px;
+  left: -2px;
+}
+
+input[type=range]::-webkit-scrollbar-track {
+  background: #00E64E;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  width: 22px;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  height: 22px;
+  cursor: pointer;
+  background: orange;
+  border-radius: 50%;
+  -webkit-box-shadow: -280px 0 0 280px #00E64E;
+          box-shadow: -280px 0 0 280px #00E64E;
+}
+
+.footer-deposites__text {
+  margin-bottom: 0.8125rem;
+  color: #7B7B7B;
+  font-family: Mazzard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-deposites__input input {
+  outline: none;
+  padding: 0.6875rem 1.125rem 0.6875rem 1.125rem;
+  color: #212121;
+  font-family: Mazzard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 279px;
+  height: 41px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#C6C6C6), to(#FFF));
+  background: linear-gradient(180deg, #C6C6C6 0%, #FFF 100%);
+  -webkit-box-shadow: 0px -39px 4px 0px rgba(255, 255, 255, 0.32) inset, 0px -1px 2px 0px rgba(183, 183, 183, 0.5) inset;
+          box-shadow: 0px -39px 4px 0px rgba(255, 255, 255, 0.32) inset, 0px -1px 2px 0px rgba(183, 183, 183, 0.5) inset;
+}
+
+.conclusion {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(186, 186, 186, 0.03);
+  -webkit-backdrop-filter: blur(4.5px);
+          backdrop-filter: blur(4.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+}
+
+.bgblue {
+  background: var(--unnamed, linear-gradient(180deg, #24A2FD 0%, #246BFD 100%));
+}
+
 .webp .page{ background-image: url(../img/bg.webp); }
 
 .webp .entrance__container{ background-image: url(../img/bg.webp); }
