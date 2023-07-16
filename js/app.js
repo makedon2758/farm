@@ -37,9 +37,10 @@
     const openBonus = document.querySelector(".footer-page__bonus");
     const bonusExit = document.querySelector(".content-bonus__exit");
     const bonusExitTwo = document.querySelector(".content-bonus__buttontwo");
+    const bonusExitThre = document.querySelector(".content-bonus__buttonthre ");
     const bonusSign = document.querySelector(".content-bonus__buttonone");
     const begr = document.querySelector(".begr");
-    console.log(!!bonusSign);
+    const imgRotate = document.querySelector(".kolo-content img");
     function modalHidden(modal) {
         modal.classList.add("hidden");
     }
@@ -73,12 +74,21 @@
     closeModal(modalReffClose, modalReff);
     closeModal(modalExitCancel, modalExit);
     closeModal(bonusExit, modalBonus);
-    closeModal(bonusExitTwo, modalBonus);
-    if (!!bonusSign) bonusSign.addEventListener("click", (() => {
+    bonusSign.addEventListener("click", (() => {
         bonusSign.style.display = "none";
         begr.style.opacity = "0";
         bonusExitTwo.classList.add("showme");
-        bonusExitTwo.classList.remove("content-bonus__buttontwo");
+    }));
+    bonusExitTwo.addEventListener("click", (e => {
+        imgRotate.classList.add("rotate");
+        bonusExitTwo.classList.remove("showme");
+        bonusExitThre.classList.add("showme");
+    }));
+    bonusExitThre.addEventListener("click", (() => {
+        closeModal(bonusExitThre, modalBonus);
+        bonusExitTwo.classList.add("showme");
+        bonusExitThre.classList.remove("showme");
+        imgRotate.classList.remove("rotate");
     }));
     window["FLS"] = true;
     isWebp();
